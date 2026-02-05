@@ -1,0 +1,41 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'notes/style.css' %}">
+    <title>Edit Note</title>
+</head>
+<body>
+    <div class="form-container">
+
+        <h1>Edit Note</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class = "form-group">
+
+                <label for="">Title</label><br>
+                <input type="text"  name="title" value="{{ note.title }}" required>
+            </div>
+
+            <div class="form-group">
+
+                
+                <label for="">Content</label>
+                <textarea name="content" id="">{{ note.content }}</textarea required>
+            </div>
+
+            <div class="form-actions">
+                <a href="{%url 'home' %}">Cancel</a>
+                
+                
+                <button class = "btn btn-edit" type="submit">Update</button>
+            </div>
+        </form>
+        
+        
+    </div>
+    
+</body>
+</html>

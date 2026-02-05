@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+    color:#333
+}
+
+
+.container
+{
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1{
+    margin: 0;
+}
+
+.btn{
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+}
+
+.btn-add{
+    background-color: #4CAF50;
+}
+
+.btn-edit{
+    background-color: #2196F3;
+}
+
+.btn-delete{
+    background-color: #f44336;
+}
+
+.note
+{
+    background: white;
+    padding: 16px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.note h3
+{
+    margin-top: 10px;
+}
+
+.note p 
+{
+    color: #555;
+}
+
+.note-actions {
+    margin-top: 10px;
+}
+
+.note-actions a{
+    margin-right: 8px;
+}
+
+.form-container{
+    max-width: 500px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+
+}
+
+.form-container h1{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label{
+    font-weight: 600;
+    display: block;
+    margin-bottom: 6px;
+
+}
+.form-group input , .form-group textarea{
+    width: 100%;
+    padding: 10px;
+    bottom: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-actions a{
+    text-decoration: none;
+    color: #555;
+}
+.form-actions button {
+    border: none;
+    cursor: pointer;
+}

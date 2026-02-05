@@ -1,0 +1,34 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{% static 'notes/style.css' %} " />
+        <title>Notes App</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+
+                <h1>My Notes</h1>
+                <a href= "{% url 'add_note' %}" class="btn btn-add">➕Add Note</a>
+            </div>
+            {% for note in notes %}
+            <div class="note">
+                <h3>{{ note.title }}</h3>
+                <p>{{ note.content }}</p>
+                <small>{{ note.created_at }}</small>
+                <hr />
+                <div class="note-actions">
+
+                    <a href="{% url 'edit_note' note.id %}" class ="btn btn-edit">✏️Edit Note</a>
+                    <a href="{% url 'delete_note' note.id %}" class = "btn btn-delete">🗑️Deleted Note</a>
+                </div>
+            </div>
+            {% empty %}
+            <p>No notes yet</p>
+            {% endfor %}
+    </div>
+  </body>
+</html>
